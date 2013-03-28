@@ -1,0 +1,143 @@
+% !Mode:: "TeX:UTF-8"
+%% start of file `template_en.tex'.
+%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,xetex]{moderncv}
+
+%
+\usepackage{fontspec,xunicode} % 加载 xetex 的宏包
+%xltxtra
+% 以下是英文字体的设置
+\defaultfontfeatures{Scale=MatchLowercase} % 这个参数保证 serif、sans-serif 和 monospace 字体在小写时大小匹配
+\setmainfont[Numbers=OldStyle,Mapping=tex-text]{Times New Roman} % 使用 Garamond 字体，把数字设置为等宽，比较好看
+\setsansfont[Mapping=tex-text]{Times New Roman} % 使用 XeTeX 的 text-mapping 方案，正确显示 LaTeX 样式的双引号（`` ''）
+\setmonofont{Times New Roman}
+
+% 以下是中文字体的设置
+\usepackage[slantfont,boldfont,CJKnumber]{xeCJK} % 加载 xeCJK，允许斜体、粗体和 CJK 数字以及 CJK 对空格的设置
+%CJKtextspaces
+\setCJKmainfont[BoldFont={SimHei}, ItalicFont={KaiTi}]{SimSun}
+\setCJKsansfont{KaiTi}
+\setCJKmonofont{STFangsong}
+
+
+\setCJKfamilyfont{song}{SimSun}
+\setCJKfamilyfont{kai}{KaiTi}
+\setCJKfamilyfont{hei}{SimHei}
+\setCJKfamilyfont{hwkai}{STKaiti}
+\setCJKfamilyfont{hwfs}{STFangsong}
+\setCJKfamilyfont{hws}{STSong}
+\setCJKfamilyfont{fs}{FangSong}
+\setCJKfamilyfont{yahei}{SimHei}
+
+\newcommand\song{\CJKfamily{song}}
+\newcommand\kai{\CJKfamily{kai}}
+\newcommand\hei{\CJKfamily{hei}}
+\newcommand\hwkai{\CJKfamily{hwkai}}
+\newcommand\hwfs{\CJKfamily{hwfs}}
+\newcommand\hws{\CJKfamily{hws}}
+\newcommand\fs{\CJKfamily{fs}}
+\newcommand\yahei{\CJKfamily{yahei}}
+
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}
+
+
+
+% moderncv themes
+%\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem casual
+\moderncvtheme[blue,roman]{sld}
+% character encoding
+%\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{\kai{侍路登}}
+\familyname{}
+\title{个人简历}               % optional, remove the line if not wanted
+\address{浙江省杭州市浙大路38号浙江大学玉泉校区曹光彪西楼404}{邮编：310027}    % optional, remove the line if not wanted
+\mobile{18868818796}                    % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{lvtonsmith@yeah.net}
+%\email{lvtonsmith@gmail.com}                     % optional, remove the line if not wanted
+\extrainfo{http://shiludeng.com} % optional, remove the line if not wanted
+\photo[64pt]{sld.jpg}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\quote{浙江大学~~计算机应用技术专业~~硕士研究生}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{\fs{基本信息}}
+\cvcomputer{姓~~~~~~~~名：}{侍路登}{性~~~~~~~~别：}{男}
+\cvcomputer{民~~~~~~~~族：}{汉族}{籍~~~~~~~~贯：}{江苏省东海县}
+\cvcomputer{出生日期：}{1989-10-05}{政治面貌：}{中共党员}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\fs{受教育经历}}
+\cventry{2004--2007}{\textit{高中}}{江苏省东海高级中学}{江苏省连云港市}{}{}
+\cventry{2007--2011}{\textit{本科}}{南京理工大学}{江苏省南京市}{}{}
+\cventry{2011--~~~~~~~~}{\textit{硕士}}{浙江大学}{浙江省杭州市}{}{}
+\section{\fs{个人能力}}
+\cvline{\kai{学习能力}}{研究生入学考试成绩优秀，获得公费名额；研究生学习期间考试成绩优秀；有较强的自学能力；}
+\cvline{\kai{理论水平}}{在计算机软件开发、系统分析与设计、数据库设计与管理、计算机网络技术、项目管理、软件工程等相关领域，有坚实的理论基础；}
+\cvline{\kai{专业技能}}{ 掌握C语言，C++等程序设计语言，能熟练使用OFFICE办公软件；}
+\cvline{\kai{工作能力}}{工作尽职尽责、服从领导，能够认真、按时完成任务，具有良好的团队合作精神；}
+
+\section{\fs{获奖经历}}
+\cvlistdoubleitem[\Neutral]{“江苏省首届大学生程序设计竞赛省二等奖”}{“南京理工大学优秀学生党员”；}
+\cvlistdoubleitem[\Neutral]{国家奖学金}{}
+
+\section{\fs{项目经历}}
+
+\subsection{本科项目}
+\cventry{2009--2010}{开发人员}{}{}{}{}%{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
+
+\section{\fs{爱好}}
+\cvlistdoubleitem[\Neutral]{羽毛球}{乒乓球}
+\cvlistdoubleitem[\Neutral]{中国象棋}{唱歌}
+
+
+\section{\fs{自我评价}}
+\cvline{\kai{性格}}{开朗、活泼、乐观}
+\cvline{\kai{学习}}{勤奋严谨，有钻研精神，动手能力强，有很强的自学能力}
+\cvline{\kai{生活}}{勤俭节约，吃苦耐劳，热爱集体，乐于助人，积极参加各类公共活动，有良好的人际关系}
+\cvline{\kai{工作}}{做事细心，认真负责，能够高效率的完成工作，易于沟通，具有良好的团队意识，热爱自己从事的工作，敢挑重担}
+
+% Publications from a BibTeX file
+\newcommand{\refname}{发表论文}
+%\nocite{*}
+%\bibliographystyle{unsrt}
+%\bibliography{shiludeng}       % 'publications' is the name of a BibTeX file
+\begin{thebibliography}{99}
+% \bibitem {1} Hongtao Huang, Shaobin Huang, Tao Zhang. A Formal Method for Verifying Production Knowledge Base[A]. Internet Computing for Science and Engineering (ICICSE), 2009 Fourth International Conference on[C]. 2009: 19-23.
+% \bibitem {2} Tao Zhang, Shaobin Huang, Hongtao Huang. An Operational Semantics for UML RT-Statechart in Model Checking Context[A]. Internet Computing for Science and Engineering (ICICSE), 2009 Fourth International Conference on[C]. 2009: 12-18.
+
+\end{thebibliography}
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
